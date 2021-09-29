@@ -1,0 +1,29 @@
+
+In this project, you need to implement a system to maintain a simple store.
+The store sells 3 kinds of products: jam, pasta and bread.
+
+Each of them has a fixed size, so e.g. jam has a size of 2, while pasta has
+the size 3.
+
+You have a storage with capacity for a number of products. The storage has a capacity
+using the same unit as is used for product size.
+
+This means that if you have a storage of size 10, you can e.g. put
+1 pasta and 3 jam in it, but not 3 pasta and 1 jam.
+
+The class StoreService is used to maintain the storage. It has two methods, addProducts
+and removeProducts.
+
+addProducts takes one product and a number, and it puts that number of that product to the store
+removeProduct tries to take one product out of the store. It returns an optional, which either is
+an Optional.of(product) if there's at least one product in the store, and Optional.none() if there
+isn't any products of that type in the store.
+
+If there's not enough space to add all the products you're trying to add, you should throw
+(and handle) a StorageIsFullException.
+
+Task 1:
+- Implement StoreService (and everything else needed)
+- Implement three unit tests.
+    - one test should test adding and removing products the normal way
+    - one test should test what happens if you try to add too many products˚
